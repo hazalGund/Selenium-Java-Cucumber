@@ -9,7 +9,7 @@ This project is a Selenium-Cucumber automation framework for testing the Accentu
 - **utils:** Contains utility and helper classes for configuration and assertions.
 - **resources:** Contains configuration file `config.properties`.
 
-### Prerequisites
+## Prerequisites
 
 - Java 11 or later
 - Maven
