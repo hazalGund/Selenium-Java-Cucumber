@@ -8,6 +8,7 @@ This project is a Selenium-Cucumber automation framework for testing the Accentu
 - **pageObjects:** Contains the Page Object Model (POM) classes.
 - **utils:** Contains utility and helper classes for configuration and assertions.
 - **resources:** Contains configuration file `config.properties`.
+- **ci.yml:** Contains steps for running tests on CI.
 
 ## Prerequisites
 
@@ -29,3 +30,7 @@ Or execute the following command:
 
 ```sh
 mvn test
+```
+
+## Continuous Integration
+Everytime new code is pushed, GitHub Actions workflow will be triggered. 
