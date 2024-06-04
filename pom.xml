@@ -15,14 +15,12 @@
         <artifactId>selenium-java</artifactId>
         <version>4.0.0-alpha-1</version>
     </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
             <version>7.13.0</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -30,21 +28,18 @@
             <version>7.13.0</version>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-html</artifactId>
             <version>0.2.7</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.13.0</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -52,22 +47,17 @@
             <version>1.0.6</version>
             <scope>provided</scope>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin</artifactId>
             <version>26.2.0</version>
         </dependency>
-
         <dependency>
             <groupId>me.jvt.cucumber</groupId>
             <artifactId>reporting-plugin</artifactId>
             <version>5.0.0</version>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -104,11 +94,8 @@
             <version>2.7.7</version>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
-
+    
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
         <maven.compiler.target>22</maven.compiler.target>
