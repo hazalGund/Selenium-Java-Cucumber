@@ -14,3 +14,18 @@ This project is a Selenium-Cucumber automation framework for testing the Accentu
 - Java 11 or later
 - Maven
 - ChromeDriver (WebDriverManager is used to manage this automatically)
+
+## Running Tests
+
+Use TestRunner:
+
+1. Open your IDE (e.g., IntelliJ IDEA, Eclipse).
+2. Navigate to src/test/java/testRunner/TestRunner.java.
+3. Right-click on the TestRunner class and select Run 'TestRunner'.
+
+This will execute the Cucumber tests and generate the report.
+
+or execute the following command:
+
+```sh
+mvn test

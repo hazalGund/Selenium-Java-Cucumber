@@ -3,33 +3,26 @@ package stepDefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.HomePage;
 import utils.ConfigReader;
+import utils.DriverManager;
 import utils.HelperClass;
 
 public class AccentureSteps {
 
-    public WebDriver driver;
-    HomePage hm;
+    private WebDriver driver;
+    private HomePage hm;
 
     @Given("I am on the Accenture homepage")
     public void i_am_on_the_Accenture_homepage() {
 
-        //setup
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-
         //launch Browser
-        driver = new ChromeDriver(options);
+        driver = DriverManager.getDriver();
         hm = new HomePage(driver);
 
         String url = ConfigReader.getProperty("baseUrl");
@@ -59,9 +52,7 @@ public class AccentureSteps {
 
     @After
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverManager.quitDriver();
     }
 
 }
