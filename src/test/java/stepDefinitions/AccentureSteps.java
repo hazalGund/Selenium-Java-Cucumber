@@ -1,12 +1,12 @@
 package stepDefinitions;
 
-import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -57,7 +57,7 @@ public class AccentureSteps {
         HelperClass.assertPageTitle(driver, pageTitle);
     }
 
-    @AfterAll
+    @After
     public void tearDown() {
         if (driver != null) {
             driver.quit();
