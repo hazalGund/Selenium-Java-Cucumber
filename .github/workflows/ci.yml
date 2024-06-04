@@ -34,6 +34,11 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-maven
 
+    - name: Set Java 22
+      run: |
+        sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-11-openjdk-amd64/bin/java 1
+        sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java    
+
     - name: Install Maven dependencies
       run: mvn install -DskipTests
 
