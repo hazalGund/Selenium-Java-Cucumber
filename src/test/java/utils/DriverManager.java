@@ -15,8 +15,7 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
-                options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-                options.addArguments("--no-sandbox"); // Bypass OS security model
+                options.addArguments("--headless");
                 driver = new ChromeDriver(options);
             } catch (Exception e) {
                 throw new RuntimeException("Failed to initialize WebDriver: " + e.getMessage());
