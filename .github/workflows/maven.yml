@@ -11,11 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install Chrome
-      uses: logikal-io/install-chrome@v1.0.1
-      with:
-         version: 125.0.6422.141-1
-          
 
     - name: Set up Chrome
       run: |
