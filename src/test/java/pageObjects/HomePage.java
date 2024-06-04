@@ -10,8 +10,8 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public  void maximizeWindow(){
+    public void maximizeWindow() {
         driver.manage().window().maximize();
     }
-    
+
 }

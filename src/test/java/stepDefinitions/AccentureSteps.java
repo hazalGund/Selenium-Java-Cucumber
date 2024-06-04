@@ -1,4 +1,5 @@
 package stepDefinitions;
+
 import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -31,39 +32,36 @@ public class AccentureSteps {
         driver = new ChromeDriver(options);
         hm = new HomePage(driver);
 
-
         String url = ConfigReader.getProperty("baseUrl");
         driver.get(url);
         hm.maximizeWindow();
 
-       //Assert Title
-       HelperClass.assertPageTitle(driver, ConfigReader.getProperty("homepageTitle"));
+        //Assert Title
+        HelperClass.assertPageTitle(driver, ConfigReader.getProperty("homepageTitle"));
     }
-
 
     @When("I click {string} grid")
     public void I_click_grid(String gridName) {
         WebElement element;
-        if(gridName.equals("hero")) {
-            element =HelperClass.waitForElementWithFluentWait(driver, By.id(ConfigReader.getProperty(gridName)));
+        if (gridName.equals("hero")) {
+            element = HelperClass.waitForElementWithFluentWait(driver, By.id(ConfigReader.getProperty(gridName)));
         } else {
             String cssSelector = "button.rad-content-grid-card__front-toggle[aria-label='" + gridName + "']";
             element = HelperClass.waitForElementWithFluentWait(driver, By.cssSelector(cssSelector));
         }
-        element.click();    
+        element.click();
     }
 
     @Then("I should see the {string} page")
     public void I_should_see_the_page(String pageTitle) {
-         HelperClass.assertPageTitle(driver, pageTitle);
+        HelperClass.assertPageTitle(driver, pageTitle);
     }
 
     @AfterAll
     public void tearDown() {
-    if (driver != null) {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
-}
-
 
 }

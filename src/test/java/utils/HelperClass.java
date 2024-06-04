@@ -19,9 +19,9 @@ public class HelperClass {
     public static WebElement waitForElementWithFluentWait(WebDriver driver, final By locator) {
 
         Wait<WebDriver> wait = new FluentWait<>(driver)
-            .withTimeout(Duration.ofSeconds(12))
-            .pollingEvery(Duration.ofSeconds(3))
-            .ignoring(NoSuchElementException.class);
+                .withTimeout(Duration.ofSeconds(12))
+                .pollingEvery(Duration.ofSeconds(3))
+                .ignoring(NoSuchElementException.class);
 
         WebElement element = wait.until((WebDriver webDriver) -> driver.findElement(locator));
         return element;
